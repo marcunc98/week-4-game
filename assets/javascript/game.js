@@ -4,7 +4,12 @@ var losses = 0;
 var crystalTotals = 0;
 var l = "You Lose!!";
 var w = "You Win!!";
+var images = ['http://www.scienceclarified.com/photos/crystal-3107.jpg',
+'https://hdwallsource.com/img/2014/5/crystal-wallpaper-29296-30015-hd-wallpapers.jpg',
+'https://www.nature.com/polopoly_fs/7.45449.1500565223!/image/WEB_Crystal.jpg_gen/derivatives/landscape_630/WEB_Crystal.jpg',
+'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHyWYyRGJSNuyzM8-xqzpgWsXnH-70bHds1239qem2HJycMCS0'
 
+]
 
 // FUNCTIONS (not sure how to reset game/scores) EVERYTHING APPEARS TO GO INSIDE THE DOC.READY FUNCTION
 $(document).ready(function() {
@@ -31,8 +36,9 @@ $(document).ready(function() {
       crystalCollectors.addClass("crystal number");
       crystalCollectors.attr("data-number", randomNumber); //set value of each crystal
       // crystalCollectors.text(randomNumber);
+      crystalCollectors.css("background-image", "url('" + images[i] + "')");
 
-     var img = $(".crystalCollectors").css("background-image", "url('http://www.scienceclarified.com/photos/crystal-3107.jpg')");
+    //  var img = $(".crystalCollectors").css("background-image", "url('" + images[i] + "')");
       // $(".crystalCollectors").attr("style", "background-image: url('https://i0.wp.com/sociedadejedi.com.br/wp-content/uploads/2017/11/Sem-t%C3%ADtulo-1.jpg?fit=528%2C480')");
     }
   }
